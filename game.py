@@ -16,3 +16,13 @@ Spock vaporizes Rock
 """
 
 print(greeting)
+
+input = ("How many players? 1 or 2?")
+
+input = ("""Enter a number for your selection: 
+1. Rock
+2. Paper
+3. Scissors
+4. Lizard
+5. Spock
+""")
