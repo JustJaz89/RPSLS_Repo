@@ -26,3 +26,17 @@ input = ("""Enter a number for your selection:
 4. Lizard
 5. Spock
 """)
+
+def number_to_name(number):
+    if number == 1:
+        return "Rock"
+    elif number == 2:
+        return "Paper"
+    elif number == 3:
+        return "Scissors"
+    elif number == 4:
+        return "Lizard"
+    elif number == 5:
+        return "Spock"
+    else:
+        return "Error"
