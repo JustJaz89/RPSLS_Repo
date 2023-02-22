@@ -1,6 +1,6 @@
 from player import Player
-import human
-import ai
+from human import Human
+from computer import Computer
 
 class Game:
     def __init__(self) -> None:
