@@ -1,12 +1,11 @@
 from player import Player
 from human import Human
-from computer import Computer
+from ai import Computer
 
 class Game:
-    def __init__(self) -> None:
-        pass
+    def __init__(self):
 
-    greeting = """Welcome to Rock Paper Scissors Lizard Spock!
+        greeting = """Welcome to Rock Paper Scissors Lizard Spock!
 
     Best out of three matches wins!
 
@@ -23,7 +22,7 @@ class Game:
     Spock vaporizes Rock
     """
 
-    print(greeting)
+        print(greeting)
 
     gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
 
@@ -42,67 +41,68 @@ input = ("How many players? 1 or 2?")
 #     print("Computer chooses " + computer_name + ".")
 #     print(winner)
 
-def run_game():
-    pass
-
-if (player_choice == computer):
+if (Human == Computer):
     print("It's a tie!")
 
-elif player_choice == 'Rock':
-    if computer == 'Scissors':
+elif Human == 'Rock':
+    if Computer == 'Scissors':
        print('Player wins! Rock breaks Scissors')
     else:
        print('Computer wins!')
 
-elif player_choice == 'Paper':
-   if computer == 'Rock':
+elif Human == 'Paper':
+   if Computer == 'Rock':
        print('Computer wins! Paper covers Rock!')
    else: 
        print('Player wins!')
 
-elif player_choice == 'Scissors':
-   if computer == 'Paper':
+elif Human == 'Scissors':
+   if Computer == 'Paper':
       print('Player wins! Scissors cut Paper!')
    else:
       print('Computer wins!')
     
-elif player_choice == 'Rock':
-    if computer == 'Lizard':
+elif Human == 'Rock':
+    if Computer == 'Lizard':
        print('Player wins! Rock crushes Lizard')
     else:
        print('Player wins!')
 
-elif player_choice == 'Spock':
-    if computer == 'Scissors':
+elif Human == 'Spock':
+    if Computer == 'Scissors':
        print('Player wins! Spock smashes Scissors')
     else:
         print('Computer wins!')
 
-elif player_choice == 'Lizard':
-    if computer == 'Scissors':
+elif Human == 'Lizard':
+    if Computer == 'Scissors':
        print('Computer wins! Scissors decapitates Lizard!')
     else:
         print('Player wins!')
 
-elif player_choice == 'Paper':
-    if computer =='Lizard':
+elif Human == 'Paper':
+    if Computer =='Lizard':
         print('Computer wins! Lizard eats Paper!')
     else:
         print('Player wins!') 
 
-elif player_choice == 'Spock':
-    if computer == 'Paper':
+elif Human == 'Spock':
+    if Computer == 'Paper':
         print('Computer wins! Paper disproves Spock')
     else:
         print('Player wins!')
 
-elif player_choice == 'Spock':
-    if computer == 'Rock':
+elif Human == 'Spock':
+    if Computer == 'Rock':
         print('Player wins! Spock Vaporizes Rock')
     else:
         print('Computer wins!') 
 
+def run_game(self):
+    pass
+
+
 # else:
 #     pass
-player = Player()
-player.choices()
+# player = player_choice()
+# player.computer()
