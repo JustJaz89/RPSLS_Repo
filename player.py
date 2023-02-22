@@ -72,5 +72,5 @@ elif player_one == 'Spock':
     else:
         print('player_two wins!') 
 
-else:
-    print("Invalid input!")
+# else:
+#     print("Invalid input!")
