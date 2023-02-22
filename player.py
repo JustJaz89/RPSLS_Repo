@@ -1,20 +1,39 @@
 import random
 
-while('true'):
- player_one = input('please enter rock(1), paper(2), scissors(3), lizard(4), spock(5): ')
-player_two = random.randint(1,5)
+player_choices = ['0,1,2,3,4']
 
-if player_two == 0:
-   player_two = 'Rock'
-elif player_two == 1:
-    player_two = 'Paper'
-elif player_two == 2:
-    player_two = 'Scissors'
-elif player_two == 3:
-    player_two = 'Lizard'
-elif player_two == 4:
-    player_two = 'Spock'
+class Player():
+    def __init__(self) -> None:
+        self.gestures = ['Rock', 'paper', 'Scissors', 'Lizad', 'Spock']
+        self.selected_gesture = ''
+    def choices(self):      
+        Player_is_running = True
+        while Player_is_running == True:
+            player_choices = input('please enter rock(0), paper(1), scissors(2), lizard(3), spock(4): ')
+            if player_choices == '0':
+                self.selected_gesture = 'Rock'
+                break
+            elif player_choices == '1':
+                self.selected_gesture = 'Paper'
+                break
+            elif player_choices == '2':
+                self.selected_gesture = 'Scissors'
+                break
+            elif player_choices == '3':
+                self.selected_gesture = 'Lizard'
+                break
+            elif player_choices == '4':
+                self.selected_gesture = 'Spock'
+                break
+                #player_two = random.randint(0,4)
+       # if player_one in player_choices:
+            #print('Your move!')
+    
+    
+player = Player()
+player.choices()
 
+'''
 if (player_one == player_two):
     print("It's a tie!")
 
@@ -71,3 +90,11 @@ elif player_one == 'Spock':
         print('player_one wins! Spock Vaporizes Rock')
     else:
         print('Player_two wins!') 
+
+print('your choice: ' + 'player_one' + "\n player_two's choice: " + player_two + "\nThank you for playing!")
+print("Do you want to play again? (Y/N)")
+ans = input()
+
+if ans == 'n' or ans == 'N':
+   break
+'''
