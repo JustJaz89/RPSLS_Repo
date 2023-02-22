@@ -37,36 +37,6 @@ class Game:
 
 # input = ("How many players? 1 or 2?")
 
-# def number_to_name(number):
-#     if number == 0:
-#         return "Rock"
-#     elif number == 1:
-#         return "Spock"
-#     elif number == 2:
-#         return "Paper"
-#     elif number == 3:
-#         return "Lizard"
-#     elif number == 4:
-#         return "Scissors"
-#     else:
-#         return "Enter a valid number, 0-4: "
-
-# def rpsls(name):
-#     import random
-
-#     player_number = number_to_name(name)
-#     computer_number = random.randrange(5)
-#     difference = (player_number - computer_number) & 5
-
-#     if difference == 0:
-#         winner = "It's a tie!"
-#     elif difference < 3:
-#         winner = "Player wins!"
-#     else:
-#         winner = "Computer wins!"
-
-#     computer_name = number_to_name(computer_number)
-
 #     print("")
 #     print("Player chooses " + name + ".")
 #     print("Computer chooses " + computer_name + ".")
@@ -80,57 +50,57 @@ if (player_choice == player_two):
 
 elif player_choice == 'Rock':
     if player_two == 'Scissors':
-       print('player_one wins! Rock breaks Scissors')
+       print('Player wins! Rock breaks Scissors')
     else:
-       print('player_two wins!')
+       print('Computer wins!')
 
 elif player_one == 'Paper':
    if player_two == 'Rock':
-       print('player_two wins! Paper covers Rock!')
+       print('Computer wins! Paper covers Rock!')
    else: 
-       print('player_one wins!')
+       print('Player wins!')
 
 elif player_one == 'Scissors':
    if player_two == 'Paper':
-      print('player_one wins! Scissors cut Paper!')
+      print('Player wins! Scissors cut Paper!')
    else:
-      print('player_two wins!')
+      print('Computer wins!')
     
 elif player_one == 'Rock':
     if player_two == 'Lizard':
-       print('player_one wins! Rock crushes Lizard')
+       print('Player wins! Rock crushes Lizard')
     else:
-       print('player_one wins!')
+       print('Player wins!')
 
 elif player_one == 'Spock':
     if player_two == 'Scissors':
-       print('player_one wins! Spock smashes Scissors')
+       print('Player wins! Spock smashes Scissors')
     else:
-        print('player_two wins!')
+        print('Computer wins!')
 
 elif player_one == 'Lizard':
     if player_two == 'Scissors':
-       print('player_two wins! Scissors decapitates Lizard!')
+       print('Computer wins! Scissors decapitates Lizard!')
     else:
-        print('player_one wins!')
+        print('Player wins!')
 
 elif player_one == 'Paper':
     if player_two =='Lizard':
-        print('player_two wins! Lizard eats Paper!')
+        print('Computer wins! Lizard eats Paper!')
     else:
-        print('player_one wins!') 
+        print('Player wins!') 
 
 elif player_one == 'Spock':
     if player_two == 'Paper':
-        print('player_two wins! Paper disproves Spock')
+        print('Computer wins! Paper disproves Spock')
     else:
-        print('player_one wins!')
+        print('Player wins!')
 
 elif player_one == 'Spock':
     if player_two == 'Rock':
-        print('player_one wins! Spock Vaporizes Rock')
+        print('Player wins! Spock Vaporizes Rock')
     else:
-        print('player_two wins!') 
+        print('Computer wins!') 
 
 # else:
 #     pass
