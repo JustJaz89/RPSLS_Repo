@@ -1,6 +1,6 @@
 from player import Player
-from human import human 
-from ai import ai
+from human import Human
+from computer import Computer
 
 class Game:
     def __init__(self) -> None:
@@ -37,40 +37,10 @@ class Game:
 
 input = ("How many players? 1 or 2?")
 
-# def number_to_name(number):
-#     if number == 0:
-#         return "Rock"
-#     elif number == 1:
-#         return "Spock"
-#     elif number == 2:
-#         return "Paper"
-#     elif number == 3:
-#         return "Lizard"
-#     elif number == 4:
-#         return "Scissors"
-#     else:
-#         return "Enter a valid number, 0-4: "
-
-def rpsls(name):
-    import random
-
-    player_number = 'number_to_name'(name)
-    computer_number = random.randrange(5)
-    difference = (player_number - computer_number) & 5
-
-    if difference == 0:
-        winner = "It's a tie!"
-    elif difference < 3:
-        winner = "Player wins!"
-    else:
-        winner = "Computer wins!"
-
-    computer_name = 'number_to_name'(computer_number)
-
-    print("")
-    print("Player chooses " + name + ".")
-    print("Computer chooses " + computer_name + ".")
-    print(winner)
+#     print("")
+#     print("Player chooses " + name + ".")
+#     print("Computer chooses " + computer_name + ".")
+#     print(winner)
 
 def run_game():
     pass
@@ -78,56 +48,61 @@ def run_game():
 if (human == ai):
     print("It's a tie!")
 
-elif human == 'Rock':
-    if ai == 'Scissors':
-       print('player_one wins! Rock breaks Scissors')
+elif player_choice == 'Rock':
+    if player_two == 'Scissors':
+       print('Player wins! Rock breaks Scissors')
     else:
-       print('player_two wins!')
+       print('Computer wins!')
 
-elif human == 'Paper':
-   if ai == 'Rock':
-       print('player_two wins! Paper covers Rock!')
+elif player_one == 'Paper':
+   if player_two == 'Rock':
+       print('Computer wins! Paper covers Rock!')
    else: 
-       print('player_one wins!')
+       print('Player wins!')
 
-elif human == 'Scissors':
-   if ai == 'Paper':
-      print('player_one wins! Scissors cut Paper!')
+elif player_one == 'Scissors':
+   if player_two == 'Paper':
+      print('Player wins! Scissors cut Paper!')
    else:
-      print('player_two wins!')
+      print('Computer wins!')
     
-elif human == 'Rock':
-    if ai == 'Lizard':
-       print('player_one wins! Rock crushes Lizard')
+elif player_one == 'Rock':
+    if player_two == 'Lizard':
+       print('Player wins! Rock crushes Lizard')
     else:
-       print('player_one wins!')
+       print('Player wins!')
 
-elif human == 'Spock':
-    if ai == 'Scissors':
-       print('player_one wins! Spock smashes Scissors')
+elif player_one == 'Spock':
+    if player_two == 'Scissors':
+       print('Player wins! Spock smashes Scissors')
     else:
-        print('player_two wins!')
+        print('Computer wins!')
 
-elif human == 'Lizard':
-    if ai == 'Scissors':
-       print('player_two wins! Scissors decapitates Lizard!')
+elif player_one == 'Lizard':
+    if player_two == 'Scissors':
+       print('Computer wins! Scissors decapitates Lizard!')
     else:
-        print('player_one wins!')
+        print('Player wins!')
 
-elif human== 'Paper':
-    if ai =='Lizard':
-        print('player_two wins! Lizard eats Paper!')
+elif player_one == 'Paper':
+    if player_two =='Lizard':
+        print('Computer wins! Lizard eats Paper!')
     else:
-        print('player_one wins!') 
+        print('Player wins!') 
 
-elif human == 'Spock':
-    if ai == 'Paper':
-        print('player_two wins! Paper disproves Spock')
+elif player_one == 'Spock':
+    if player_two == 'Paper':
+        print('Computer wins! Paper disproves Spock')
     else:
-        print('player_one wins!')
+        print('Player wins!')
 
-elif human == 'Spock':
-    if ai == 'Rock':
-        print('player_one wins! Spock Vaporizes Rock')
+elif player_one == 'Spock':
+    if player_two == 'Rock':
+        print('Player wins! Spock Vaporizes Rock')
     else:
-        print('player_two wins!') 
+        print('Computer wins!') 
+
+# else:
+#     pass
+player = Player()
+player.choices()

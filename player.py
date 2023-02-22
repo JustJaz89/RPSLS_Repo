@@ -1,10 +1,10 @@
 import random
 
-player_choices = ["'0', '1', '2', '3', '4'"]
+player_choices = ["0", "1", "2", "3", "4"]
 
 class Player():
     def __init__(self) -> None:
-        self.gestures = ['Rock', 'paper', 'Scissors', 'Lizard', 'Spock']
+        self.gestures = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
         self.selected_gesture = ''
     def choices(self):      
         Player_is_running = True
