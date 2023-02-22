@@ -1,4 +1,4 @@
-import player
+from player import Player
 import human
 import ai
 
@@ -75,10 +75,10 @@ class Game:
 # def run_game():
 #     pass
 
-if (player_one == player_two):
+if (player_choice == player_two):
     print("It's a tie!")
 
-elif player_one == 'Rock':
+elif player_choice == 'Rock':
     if player_two == 'Scissors':
        print('player_one wins! Rock breaks Scissors')
     else:
@@ -132,5 +132,7 @@ elif player_one == 'Spock':
     else:
         print('player_two wins!') 
 
-else:
-    pass
+# else:
+#     pass
+player = Player()
+player.choices()
