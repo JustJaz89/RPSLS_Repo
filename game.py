@@ -27,9 +27,9 @@ class Game:
 
     # input = ("How many players? 1 or 2?")
 
-    choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+    gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
 
-    choices = input(f"""Player, please enter a number for your selection: 
+    gestures = input(f"""Player, please enter a number for your selection: 
     0. Rock
     1. Spock
     2. Paper
