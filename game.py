@@ -25,8 +25,6 @@ class Game:
 
     print(greeting)
 
-    # input = ("How many players? 1 or 2?")
-
     gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
 
     gestures = input(f"""Player, please enter a number for your selection: 
@@ -36,6 +34,8 @@ class Game:
     3. Lizard
     4. Scissors
     """)
+
+input = ("How many players? 1 or 2?")
 
 # def number_to_name(number):
 #     if number == 0:
