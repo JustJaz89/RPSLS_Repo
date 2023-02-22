@@ -14,6 +14,8 @@ elif player_two == 4:
     player_two = 'Lizard'
 elif player_two == 5:
     player_two = 'Spock'
+else:
+    print("Invalid input.")
 
 if (player_one == player_two):
     print("It's a tie!")
@@ -73,4 +75,4 @@ elif player_one == 'Spock':
         print('player_two wins!') 
 
 # else:
-#     print("Invalid input!")
+#     pass
