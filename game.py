@@ -45,59 +45,59 @@ input = ("How many players? 1 or 2?")
 def run_game():
     pass
 
-if (human == ai):
+if (player_choice == computer):
     print("It's a tie!")
 
 elif player_choice == 'Rock':
-    if player_two == 'Scissors':
+    if computer == 'Scissors':
        print('Player wins! Rock breaks Scissors')
     else:
        print('Computer wins!')
 
-elif player_one == 'Paper':
-   if player_two == 'Rock':
+elif player_choice == 'Paper':
+   if computer == 'Rock':
        print('Computer wins! Paper covers Rock!')
    else: 
        print('Player wins!')
 
-elif player_one == 'Scissors':
-   if player_two == 'Paper':
+elif player_choice == 'Scissors':
+   if computer == 'Paper':
       print('Player wins! Scissors cut Paper!')
    else:
       print('Computer wins!')
     
-elif player_one == 'Rock':
-    if player_two == 'Lizard':
+elif player_choice == 'Rock':
+    if computer == 'Lizard':
        print('Player wins! Rock crushes Lizard')
     else:
        print('Player wins!')
 
-elif player_one == 'Spock':
-    if player_two == 'Scissors':
+elif player_choice == 'Spock':
+    if computer == 'Scissors':
        print('Player wins! Spock smashes Scissors')
     else:
         print('Computer wins!')
 
-elif player_one == 'Lizard':
-    if player_two == 'Scissors':
+elif player_choice == 'Lizard':
+    if computer == 'Scissors':
        print('Computer wins! Scissors decapitates Lizard!')
     else:
         print('Player wins!')
 
-elif player_one == 'Paper':
-    if player_two =='Lizard':
+elif player_choice == 'Paper':
+    if computer =='Lizard':
         print('Computer wins! Lizard eats Paper!')
     else:
         print('Player wins!') 
 
-elif player_one == 'Spock':
-    if player_two == 'Paper':
+elif player_choice == 'Spock':
+    if computer == 'Paper':
         print('Computer wins! Paper disproves Spock')
     else:
         print('Player wins!')
 
-elif player_one == 'Spock':
-    if player_two == 'Rock':
+elif player_choice == 'Spock':
+    if computer == 'Rock':
         print('Player wins! Spock Vaporizes Rock')
     else:
         print('Computer wins!') 
