@@ -1,48 +1,73 @@
 import random
 
-class Player:
-    def __init__(self, name):
-        self.name = name
+while('true'):
+ player_one = input('please enter rock(1), paper(2), scissors(3), lizard(4), spock(5): ')
+player_two = random.randint(1,5)
 
-    def number_to_name(number):
-        if number == 0:
-            return "Rock"
-        elif number == 1:
-            return "Spock"
-        elif number == 2:
-            return "Paper"
-        elif number == 3:
-            return "Lizard"
-        elif number == 4:
-            return "Scissors"
-        else:
-            return "Enter a valid number, 0-4: "
+if player_two == 0:
+   player_two = 'Rock'
+elif player_two == 1:
+    player_two = 'Paper'
+elif player_two == 2:
+    player_two = 'Scissors'
+elif player_two == 3:
+    player_two = 'Lizard'
+elif player_two == 4:
+    player_two = 'Spock'
 
-    def rpsls(player_choice):
-        print("")
-        print("Player chooses " + player_choice)
-        player_number = number_to_name(player_choice)
-        computer_number = random.randrange(0, 5)
-        computer_choice = number_to_name(computer_number)
-        print("Computer chooses " + computer_choice)
+if (player_one == player_two):
+    print("It's a tie!")
 
-        if computer_number - player_number > 0:
-            if computer_number - player_number > 2:
-                print("Player wins!")
-            elif computer_number - player_number <= 2:
-                print("Computer wins!")
-        elif computer_number - player_number < 0:
-            if (computer_number - player_number) %5 > 2:
-                print("Player wins!")
-            elif computer_number - player_number <= 2:
-                print("Computer wins!")
-        elif computer_number == player_number:
-            print("Player and computer tie!")
-        else:
-            print("Invalid input.")
+elif player_one == 'Rock':
+    if player_two == 'Scissors':
+       print('Player_one wins! Rock breaks Scissors')
+    else:
+       print('Player_two wins!')
 
-# rpsls(0)
-# rpsls(1)
-# rpsls(2)
-# rpsls(3)
-# rpsls(4)
+elif player_one == 'Paper':
+   if player_two == 'Rock':
+       print('Player_two wins! Paper covers Rock!')
+   else: 
+       print('Player_one wins!')
+
+elif player_one == 'Scissors':
+   if player_two == 'Paper':
+      print('Player_one wins! Scissors cut Paper!')
+   else:
+      print('Player_two wins!')
+    
+elif player_one == 'Rock':
+    if player_two == 'Lizard':
+       print('Player_one wins! Rock crushes Lizard')
+    else:
+       print('Player_one wins!')
+
+elif player_one == 'Spock':
+    if player_two == 'Scissors':
+       print('player_one wins! Spock smashes Scissors')
+    else:
+        print('Player_two wins!')
+
+elif player_one == 'Lizard':
+    if player_two == 'Scissors':
+       print('player_two wins! Scissors decapitates Lizard!')
+    else:
+        print('Player_one wins!')
+
+elif player_one == 'Paper':
+    if player_two =='Lizard':
+        print('player_two wins! Lizard eats Paper!')
+    else:
+        print('player_one wins!') 
+
+elif player_one == 'Spock':
+    if player_two == 'Paper':
+        print('Player_two wins! Paper disproves Spock')
+    else:
+        print('player_one wins!')
+
+elif player_one == 'Spock':
+    if player_two == 'Rock':
+        print('player_one wins! Spock Vaporizes Rock')
+    else:
+        print('Player_two wins!') 
