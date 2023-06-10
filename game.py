@@ -1,13 +1,16 @@
+from typing import Self
 from player import Player
 from human import Human
 from ai import Computer
 
 
 class Game:
-    def __init__(self) -> None:
-        pass
+    def __init__(self):
+        self.player_one = Human("Richard")
+        self.player_two = Human("Marley")
 
-    greeting = """Welcome to Rock Paper Scissors Lizard Spock!
+    def display_greeting(self):
+        greeting = """Welcome to Rock Paper Scissors Lizard Spock!
 
     Best out of three matches wins!
 
@@ -23,87 +26,79 @@ class Game:
     Paper disproves Spock
     Spock vaporizes Rock
     """
+        print(greeting)
 
-    print(greeting)
+    def play_round(self):
+        self.player_one.choices()
+        self.player_two.choices()
+        self.compare_gesture()
 
-    gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+    def run_game(self):
+        self.display_greeting()
+        self.determine_game_mode()
+        self.play_round() 
 
-    gestures = input(f"""Player, please enter a number for your selection: 
-    0. Rock
-    1. Spock
-    2. Paper
-    3. Lizard
-    4. Scissors
-    """)
+    def determine_game_mode(self):
+        user_input = input("press1 for PvP, press 2 for PvC (computer) > ")
+        if user_input =="1":
+           self.player_two = Human("Marley")
+        elif user_input =="2":
+           self.player_two = Computer("Marley")
 
-input = ("How many players? 1 or 2?")
+    def compare_gesture(self):
+        if (self.player_one.selected_gesture == self.player_two.selected_gesture):
+            print("It's a tie!")
+
+        elif self.player_one.selected_gesture == 'Rock':
+            if self.player_two.selected_gesture == 'Scissors':
+                print(f'{self.player_one.name} wins! Rock breaks Scissors')
+            elif self.player_two.selected_gesture == "Lizard":
+                print(f'{self.player_one.name} wins! Rock crushes Lizard')
+            else:
+                print(f'{self.player_two.name} wins!')
+
+        elif self.player_one.selected_gesture == 'Paper':
+            if self.player_two.selected_gesture == 'Rock':
+                print(f'{self.player_one.name} wins! Paper covers Rock!')
+            elif self.player_two.selected_gesture == "Spock":
+                print(f'{self.player_one.name} wins! Paper disproves Spock')
+            else: 
+                print(f'{self.player_two.name} wins!')
+
+        elif self.player_one.selected_gesture == 'Scissors':
+            if self.player_two.selected_gesture == 'Paper':
+                print(f'{self.player_one.name} wins! Scissors cut Paper!')
+            elif self.player_two.selected_gesture == "Lizard":
+                print(f'{self.player_one.name} wins! Scissors decapitates Lizard')
+            else:
+                print(f'{self.player_two.name} wins!')
+
+        elif self.player_one.selected_gesture == 'Spock':
+            if self.player_two.selected_gesture == 'Scissors':
+                print(f'{self.player_one.name} wins! Spock smashes Scissors')
+            elif self.player_two.selected_gesture == 'Rock':
+                print(f'{self.player_one.name} wins! Spock vaperizes Rock')
+            else:
+                print(f'{self.player_two.name} wins!')
+
+        elif self.player_one.selected_gesture == 'Lizard':
+            if self.player_two.selected_gesture == 'Spoke':
+                print(f'{self.player_two.name} wins! Lizard poisons Spock!')
+            elif self.player_two.selected_gesture == 'Paper':
+                print(f'{self.player_one.name} wins! Lizard eats Paper')
+            else:
+                print(f'{self.player_one.name} wins!')
+
 
 #     print("")
 #     print("Player chooses " + name + ".")
 #     print("Computer chooses " + computer_name + ".")
 #     print(winner)
 
-def run_game():
-    pass
 
-if (Human == Computer):
-    print("It's a tie!")
 
-elif Human == 'Rock':
-    if Computer == 'Scissors':
-       print('Player wins! Rock breaks Scissors')
-    else:
-       print('Computer wins!')
-
-elif Human == 'Paper':
-   if Computer == 'Rock':
-       print('Computer wins! Paper covers Rock!')
-   else: 
-       print('Player wins!')
-
-elif Human == 'Scissors':
-   if Computer == 'Paper':
-      print('Player wins! Scissors cut Paper!')
-   else:
-      print('Computer wins!')
-    
-elif Human == 'Rock':
-    if Computer == 'Lizard':
-       print('Player wins! Rock crushes Lizard')
-    else:
-       print('Player wins!')
-
-elif Human == 'Spock':
-    if Computer == 'Scissors':
-       print('Player wins! Spock smashes Scissors')
-    else:
-        print('Computer wins!')
-
-elif Human == 'Lizard':
-    if Computer == 'Scissors':
-       print('Computer wins! Scissors decapitates Lizard!')
-    else:
-        print('Player wins!')
-
-elif Human == 'Paper':
-    if Computer =='Lizard':
-        print('Computer wins! Lizard eats Paper!')
-    else:
-        print('Player wins!') 
-
-elif Human == 'Spock':
-    if Computer == 'Paper':
-        print('Computer wins! Paper disproves Spock')
-    else:
-        print('Player wins!')
-
-elif Human == 'Spock':
-    if Computer == 'Rock':
-        print('Player wins! Spock Vaporizes Rock')
-    else:
-        print('Computer wins!') 
 
 # else:
 #     pass
-player = Player()
-player.choices()
+# player = player_choice()
+# player.computer()

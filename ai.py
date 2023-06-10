@@ -7,4 +7,4 @@ class Computer(Player):
         super().__init__()
 
     def choices(self):
-        self.selected_gesture = random.randrange(5)
+        self.selected_gesture = random.choice(self.gestures)
